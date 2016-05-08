@@ -11,6 +11,12 @@
 		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/Users/nickj/.gradle/caches/modules-2/files-2.1/commons-collections/commons-collections/3.2/f951934aa5ae5a88d7e6dfaa6d32307d834a88be/commons-collections-3.2.jar">
 			<dependency-type>uses</dependency-type>
 		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/Users/nickj/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-api/1.7.12/8e20852d05222dc286bf1c71d78d0531e177c317/slf4j-api-1.7.12.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/Users/nickj/.gradle/caches/modules-2/files-2.1/ch.qos.logback/logback-classic/1.1.3/d90276fff414f06cb375f2057f6778cd63c6082f/logback-classic-1.1.3.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
 		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/Users/nickj/.gradle/caches/modules-2/files-2.1/org.springframework/spring-beans/4.1.6.RELEASE/ce2d409d470948f11fad41ffdf37dcff4d28cd7c/spring-beans-4.1.6.RELEASE.jar">
 			<dependency-type>uses</dependency-type>
 		</dependent-module>
@@ -24,6 +30,9 @@
 			<dependency-type>uses</dependency-type>
 		</dependent-module>
 		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/Users/nickj/.gradle/caches/modules-2/files-2.1/org.springframework/spring-web/4.1.6.RELEASE/960101b25d0ec6f45d550bf92c00de8c6a584e6a/spring-web-4.1.6.RELEASE.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/Users/nickj/.gradle/caches/modules-2/files-2.1/ch.qos.logback/logback-core/1.1.3/e3c02049f2dbbc764681b40094ecf0dcbc99b157/logback-core-1.1.3.jar">
 			<dependency-type>uses</dependency-type>
 		</dependent-module>
 		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/Users/nickj/.gradle/caches/modules-2/files-2.1/org.springframework/spring-aop/4.1.6.RELEASE/686c13ba57d9423dede9c5d580dcadc5c67a2761/spring-aop-4.1.6.RELEASE.jar">

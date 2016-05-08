@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/mvc"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:beans="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd">
+
+	<!-- <context:component-scan base-package="com.apress.isf.spring.annotated"/> -->
+	
+	<beans:bean id="engine" class="com.apress.isf.java.service.SearchEngineService" scope="prototype">
+		<beans:property name="documentDAO" ref="documentDAO"></beans:property>
+	</beans:bean>
+	
+	<beans:bean id="documentDAO" class="com.apress.isf.spring.data.DocumentRepository" scope="prototype">
+		<beans:property name="doc1" ref="doc1" />
+		<beans:property name="doc2" ref="doc2" />
+		<beans:property name="doc3" ref="doc3" />
+		<beans:property name="doc4" ref="doc4" />
+	</beans:bean>
+	
+	<!-- doc1~4 -->
+	<beans:bean id="doc1" class="com.apress.isf.java.model.Document">
+		<beans:property name="name" value="Book Template" />
+		<beans:property name="type" ref="pdfType" />
+		<beans:property name="location" value="/Users/Book Template.pdf" />
+	</beans:bean>
+	
+	<beans:bean id="doc2" class="com.apress.isf.java.model.Document">
+		<beans:property name="name" value="Sample Contract" />
+		<beans:property name="type" ref="pdfType" />
+		<beans:property name="location" value="/Users/Sample Contract.pdf" />
+	</beans:bean>
+	
+	<beans:bean id="doc3" class="com.apress.isf.java.model.Document">
+		<beans:property name="name" value="Clustering with RabbitMQ" />
+		<beans:property name="type" ref="noteType" />
+		<beans:property name="location" value="/Users/Clustering with RabbitMQ.txt" />
+	</beans:bean>
+	
+	<beans:bean id="doc4" class="com.apress.isf.java.model.Document">
+		<beans:property name="name" value="Pro Spring Security Book" />
+		<beans:property name="type" ref="webType" />
+		<beans:property name="location" value="http://www.apress.com" />
+	</beans:bean>
+	<!--// doc1~4 -->
+	
+	<!-- Type -->
+	<beans:bean id="webType" class="com.apress.isf.java.model.Type">
+		<beans:property name="name" value="WEB" />	
+		<beans:property name="desc" value="Web Link" />	
+		<beans:property name="extension" value=".url" />	
+	</beans:bean>
+	
+	<beans:bean id="pdfType" class="com.apress.isf.java.model.Type">
+		<beans:property name="name" value="PDF" />	
+		<beans:property name="desc" value="Portable Document Format" />	
+		<beans:property name="extension" value=".pdf" />	
+	</beans:bean>
+	
+	<beans:bean id="noteType" class="com.apress.isf.java.model.Type">
+		<beans:property name="name" value="NOTE" />	
+		<beans:property name="desc" value="Text Notes" />	
+		<beans:property name="extension" value=".txt" />	
+	</beans:bean>
+	<!--// Type -->
+</beans:beans>		
